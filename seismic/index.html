@@ -19,87 +19,158 @@
 <meta name="twitter:description" content="In Eugene, seismic design must account for the Willamette Valley’s basin effects and the Cascadia Subduction Zone’s long-duration shaking potential. Our lo">
 <meta name="twitter:image" content="https://eugene-oregon.geotechnical-engineering.vip/img/anclajes-1.webp">
 <style>
-@media(max-width:900px){.nav{display:none}}
-.crumb-2dbd a:hover{color:#14B8A6}
 *{margin:0;padding:0;box-sizing:border-box}
-details{background:#FFF;border:1px solid #E5E7EB;border-radius:8px;padding:.9rem 1.2rem;margin-bottom:.6rem;cursor:pointer}
-details[open] summary{margin-bottom:.7rem}
-table{width:100%;border-collapse:collapse;margin:1rem 0}
+body{font-family:'Open Sans',system-ui,sans-serif;background:#F9FAFB;color:#111827;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.topbar{background:#1F2937;color:#FFF;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;height:80px;position:sticky;top:0;z-index:1010}
 .logo-area{display:flex;align-items:center;gap:.6rem;font-family:'Montserrat',system-ui,sans-serif}
-.nav{display:flex;gap:1rem;align-items:center}
-section.block p{margin-bottom:1rem;line-height:1.7;color:#111827;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-.cta-box-2dbd a{color:#14B8A6;font-weight:600}
-.card-body h3{color:#0F766E;font-size:1.25rem;font-weight:700;margin-bottom:1rem;font-family:'Montserrat',sans-serif}
-.crumb-2dbd{font-size:.78rem;margin-bottom:1rem;letter-spacing:.03em;color:rgba(255,255,255,.85)}
-.dd a{padding:.5rem 1.2rem;color:#111827;font-size:.85rem;display:block;white-space:normal}
-table tr:nth-child(even) td{background:#F9FAFB}
-.hero{background:linear-gradient(135deg,#0F766E 0%,#1F2937 100%);min-height:400px;display:flex;align-items:center;padding:2.5rem 2rem;color:#FFF}
-.nav-contact-btn{background:#0F766E;color:#FFF;padding:.6rem 1.4rem;font-size:.82rem;font-weight:600;letter-spacing:.05em}
-.logo-text .main{font-size:1.05rem}
-section.block{padding:3.5rem 0}
-.hero-cta{background:#14B8A6;color:#FFF;padding:.8rem 1.8rem;font-size:.82rem;font-weight:700;letter-spacing:.1em;display:inline-block}
-.card-links a{display:block;color:#0F766E;font-size:.85rem;font-weight:600;padding:.2rem 0;line-height:1.45}
-.card-links a:hover{color:#14B8A6}
 .logo-text{font-weight:700;letter-spacing:.02em;line-height:1}
+.logo-text .main{font-size:1.05rem}
+.logo-text .sub{font-size:1.05rem;color:#14B8A6}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav-item{position:relative;font-size:1.05rem;color:#FFF;cursor:pointer;padding:.8rem 0;white-space:nowrap}
+.nav-item.has-dd:hover .dd{display:flex}
+.dd{display:none;position:absolute;top:100%;left:-1rem;background:#FFF;min-width:260px;padding:.8rem 0;box-shadow:0 10px 30px rgba(0,0,0,.2);border-top:3px solid #14B8A6;flex-direction:column;z-index:1011;max-height:420px;overflow-y:auto}
+.nav-item.has-dd{padding-bottom:1.5rem;margin-bottom:-1.5rem}
+.dd a{padding:.5rem 1.2rem;color:#111827;font-size:.85rem;display:block;white-space:normal}
+.dd a:hover{background:#F5F5F5;color:#0F766E}
+.nav-contact-btn{background:#0F766E;color:#FFF;padding:.6rem 1.4rem;font-size:.82rem;font-weight:600;letter-spacing:.05em}
+.hero{background:linear-gradient(135deg,#0F766E 0%,#1F2937 100%);min-height:400px;display:flex;align-items:center;padding:2.5rem 2rem;color:#FFF}
+.hero-inner{max-width:900px;margin:0 auto;width:100%}
+.crumb{font-size:.78rem;margin-bottom:1rem;letter-spacing:.03em;color:rgba(255,255,255,.85)}
+.crumb a{color:#FFF;text-decoration:underline;font-weight:600}
+.crumb a:hover{color:#14B8A6}
 .hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:700;letter-spacing:-.01em;margin-bottom:.9rem;line-height:1.15}
 .hero .tagline{font-size:1rem;opacity:.92;margin-bottom:1.5rem;max-width:560px}
-.dd{display:none;position:absolute;top:100%;left:-1rem;background:#FFF;min-width:260px;padding:.8rem 0;box-shadow:0 10px 30px rgba(0,0,0,.2);border-top:3px solid #14B8A6;flex-direction:column;z-index:1011;max-height:420px;overflow-y:auto}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:2rem}
-.cta-box-2dbd{background:#1F2937;color:#FFF;padding:2.5rem 2rem;text-align:center;border-radius:12px;margin:3rem 0}
-details summary{font-weight:600;color:#1F2937;list-style:none}
-.dd a:hover{background:#F5F5F5;color:#0F766E}
-body{font-family:'Open Sans',system-ui,sans-serif;background:#F9FAFB;color:#111827;line-height:1.55}
-footer{background:#1F2937;color:#FFF;padding:2.5rem 2rem;text-align:center;font-size:.85rem;opacity:.88;margin-top:3rem}
-.container{max-width:1200px;margin:0 auto;padding:0 2rem}.hero h1{font-size:1.6rem}
-.nav-item.has-dd:hover .dd{display:flex}
+.hero-cta{background:#14B8A6;color:#FFF;padding:.8rem 1.8rem;font-size:.82rem;font-weight:700;letter-spacing:.1em;display:inline-block}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+section.block{padding:3.5rem 0}
 section.block h2{font-family:'Montserrat',sans-serif;font-size:1.6rem;color:#1F2937;margin-bottom:1.2rem;font-weight:700;letter-spacing:-.01em}
-.cta-box-2dbd h2{color:#FFF;margin-bottom:.6rem}
-.logo-text .sub{font-size:1.05rem;color:#14B8A6}.topbar{height:64px}
-.hero-inner{max-width:900px;margin:0 auto;width:100%}
-table td{padding:.65rem 1rem;border-bottom:1px solid #E5E7EB;font-size:.9rem}
-.card-body{padding:1.3rem}
-.crumb-2dbd a{color:#FFF;text-decoration:underline;font-weight:600}
-table th{background:#1F2937;color:#FFF;text-align:left;padding:.7rem 1rem;font-size:.88rem}
-footer a{color:#14B8A6}
-.topbar{background:#1F2937;color:#FFF;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;height:80px;position:sticky;top:0;z-index:1010}
-.card-img{height:170px;background-size:cover;background-position:center;background-color:#E5E7EB}
+section.block p{margin-bottom:1rem;line-height:1.7;color:#111827;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+section.tint{background:#F7F8FA}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:2rem}
 .svc-card{background:#FFF;border:1px solid #E5E7EB;overflow:hidden;transition:all .2s}
-a{color:inherit;text-decoration:none}
-.nav-item{position:relative;font-size:1.05rem;color:#FFF;cursor:pointer;padding:.8rem 0;white-space:nowrap}
-details p{color:#111827;line-height:1.65;margin:0}
-.nav-item.has-dd{padding-bottom:1.5rem;margin-bottom:-1.5rem}
 .svc-card:hover{box-shadow:0 10px 30px rgba(0,0,0,.08);transform:translateY(-2px)}
+.card-img{height:170px;background-size:cover;background-position:center;background-color:#E5E7EB}
+.card-body{padding:1.3rem}
+.card-body h3{color:#0F766E;font-size:1.25rem;font-weight:700;margin-bottom:1rem;font-family:'Montserrat',sans-serif}
+.card-links a{display:block;color:#0F766E;font-size:.85rem;font-weight:600;padding:.2rem 0;line-height:1.45}
+.card-links a:hover{color:#14B8A6}
 .card-viewall{display:inline-block;color:#14B8A6;font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-top:.8rem}
-section.tint{background:#F7F8FA}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"name":"Seismic in Eugene Oregon – USA","url":"https://eugene-oregon.geotechnical-engineering.vip/seismic/","isPartOf":{"@id":"https://eugene-oregon.geotechnical-engineering.vip/#website","url":"https://eugene-oregon.geotechnical-engineering.vip","@type":"WebSite"},"description":"In Eugene, seismic design must account for the Willamette Valley’s basin effects and the Cascadia Subduction Zone’s long-duration shaking potential. Our lo","@id":"https://eugene-oregon.geotechnical-engineering.vip/seismic/","@type":"WebPage","inLanguage":"en"},{"itemListElement":[{"name":"Home","item":"https://eugene-oregon.geotechnical-engineering.vip/","@type":"ListItem","position":1},{"name":"Seismic","item":"https://eugene-oregon.geotechnical-engineering.vip/seismic/","@type":"ListItem","position":2}],"@type":"BreadcrumbList"},{"name":"Seismic","itemListElement":[{"name":"Soil liquefaction analysis","url":"https://eugene-oregon.geotechnical-engineering.vip/liquefaction/","@type":"ListItem","position":1},{"name":"Base isolation seismic design","url":"https://eugene-oregon.geotechnical-engineering.vip/seismic-isolation/","@type":"ListItem","position":2},{"name":"Seismic microzonation","url":"https://eugene-oregon.geotechnical-engineering.vip/seismic-microzonation/","@type":"ListItem","position":3}],"@type":"ItemList"}]}</script><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#374151"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></head><body>
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+table th{background:#1F2937;color:#FFF;text-align:left;padding:.7rem 1rem;font-size:.88rem}
+table td{padding:.65rem 1rem;border-bottom:1px solid #E5E7EB;font-size:.9rem}
+table tr:nth-child(even) td{background:#F9FAFB}
+details{background:#FFF;border:1px solid #E5E7EB;border-radius:8px;padding:.9rem 1.2rem;margin-bottom:.6rem;cursor:pointer}
+details summary{font-weight:600;color:#1F2937;list-style:none}
+details[open] summary{margin-bottom:.7rem}
+details p{color:#111827;line-height:1.65;margin:0}
+.cta-box{background:#1F2937;color:#FFF;padding:2.5rem 2rem;text-align:center;border-radius:12px;margin:3rem 0}
+.cta-box h2{color:#FFF;margin-bottom:.6rem}
+.cta-box a{color:#14B8A6;font-weight:600}
+footer{background:#1F2937;color:#FFF;padding:2.5rem 2rem;text-align:center;font-size:.85rem;opacity:.88;margin-top:3rem}
+footer a{color:#14B8A6}
+@media(max-width:900px){.nav{display:none}.topbar{height:64px}.hero h1{font-size:1.6rem}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://eugene-oregon.geotechnical-engineering.vip/seismic/", "url": "https://eugene-oregon.geotechnical-engineering.vip/seismic/", "name": "Seismic in Eugene Oregon – USA", "inLanguage": "en", "description": "In Eugene, seismic design must account for the Willamette Valley’s basin effects and the Cascadia Subduction Zone’s long-duration shaking potential. Our lo", "isPartOf": {"@type": "WebSite", "@id": "https://eugene-oregon.geotechnical-engineering.vip/#website", "url": "https://eugene-oregon.geotechnical-engineering.vip"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://eugene-oregon.geotechnical-engineering.vip/"}, {"@type": "ListItem", "position": 2, "name": "Seismic", "item": "https://eugene-oregon.geotechnical-engineering.vip/seismic/"}]}, {"@type": "ItemList", "name": "Seismic", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://eugene-oregon.geotechnical-engineering.vip/liquefaction/", "name": "Soil liquefaction analysis"}, {"@type": "ListItem", "position": 2, "url": "https://eugene-oregon.geotechnical-engineering.vip/seismic-isolation/", "name": "Base isolation seismic design"}, {"@type": "ListItem", "position": 3, "url": "https://eugene-oregon.geotechnical-engineering.vip/seismic-microzonation/", "name": "Seismic microzonation"}]}]}</script><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#374151"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
+</style>
+</head><body>
 
 <div class="topbar">
     <div class="logo-area">
         <div class="logo-text"><div class="main">GEOTECHNICAL ENGINEERING</div><div class="sub">EUGENE OREGON</div></div>
     </div>
     <div class="nav">
-        <div class="nav-item has-dd"><a href="/investigation/" class="nav-cat-link" style="color:inherit;text-decoration:none">Investigation</a> <span>▾</span><div class="dd"><a href="/cpt-test/">CPT (Cone Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="/lab-in-situ/" class="nav-cat-link" style="color:inherit;text-decoration:none">In-Situ Testing</a> <span>▾</span><div class="dd"><a href="/sand-cone-density/">Field density test (sand cone method)</a></div></div><div class="nav-item has-dd"><a href="/laboratory/" class="nav-cat-link" style="color:inherit;text-decoration:none">Laboratory</a> <span>▾</span><div class="dd"><a href="/grain-size/">Grain size analysis (sieve + hydrometer)</a><a href="/atterberg-limits/">Atterberg limits</a></div></div><div class="nav-item has-dd"><a href="/foundations/" class="nav-cat-link" style="color:inherit;text-decoration:none">Foundations</a> <span>▾</span><div class="dd"><a href="/piles/">Pile foundation design</a></div></div><div class="nav-item has-dd"><a href="/slopes/" class="nav-cat-link" style="color:inherit;text-decoration:none">Slopes & Walls</a> <span>▾</span><div class="dd"><a href="/slope-stability/">Slope stability analysis</a><a href="/anchors/">Active/passive anchor design</a><a href="/retaining-walls/">Retaining wall design</a></div></div><div class="nav-item has-dd"><a href="/ground-improvement/" class="nav-cat-link" style="color:inherit;text-decoration:none">Ground improvement</a> <span>▾</span><div class="dd"><a href="/stone-columns/">Stone column design</a><a href="/vibrocompaction/">Vibrocompaction design</a></div></div><div class="nav-item has-dd"><a href="/excavations/" class="nav-cat-link" style="color:inherit;text-decoration:none">Underground Excavations</a> <span>▾</span><div class="dd"><a href="/soft-ground-tunnels/">Geotechnical analysis for soft soil tunnels</a><a href="/deep-excavations/">Geotechnical design of deep excavations</a><a href="/excavation-monitoring/">Geotechnical excavation monitoring</a></div></div><div class="nav-item has-dd"><a href="/road-geotechnics/" class="nav-cat-link" style="color:inherit;text-decoration:none">Roadway</a> <span>▾</span><div class="dd"><a href="/flexible-pavement/">Flexible pavement design</a><a href="/rigid-pavement/">Rigid pavement design</a><a href="/cbr-road/">CBR study for road design</a></div></div><div class="nav-item has-dd"><a href="/seismic/" class="nav-cat-link" style="color:inherit;text-decoration:none">Seismic</a> <span>▾</span><div class="dd"><a href="/liquefaction/">Soil liquefaction analysis</a><a href="/seismic-isolation/">Base isolation seismic design</a><a href="/seismic-microzonation/">Seismic microzonation</a></div></div>
+        <div class="nav-item has-dd"><a href="/investigation/" class="nav-cat-link" style="color:inherit;text-decoration:none">Investigation</a> <span>▾</span><div class="dd"><a href="/">CPT (Cone Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="/laboratory/" class="nav-cat-link" style="color:inherit;text-decoration:none">In-Situ Testing</a> <span>▾</span><div class="dd"><a href="/">Field density test (sand cone method)</a></div></div><div class="nav-item has-dd"><a href="/laboratory/" class="nav-cat-link" style="color:inherit;text-decoration:none">Laboratory</a> <span>▾</span><div class="dd"><a href="/grain-size/">Grain size analysis (sieve + hydrometer)</a><a href="/">Atterberg limits</a></div></div><div class="nav-item has-dd"><a href="/foundations/" class="nav-cat-link" style="color:inherit;text-decoration:none">Foundations</a> <span>▾</span><div class="dd"><a href="/piles/">Pile foundation design</a></div></div><div class="nav-item has-dd"><a href="/slopes/" class="nav-cat-link" style="color:inherit;text-decoration:none">Slopes & Walls</a> <span>▾</span><div class="dd"><a href="/slopes/">Slope stability analysis</a><a href="/anchors/">Active/passive anchor design</a><a href="/">Retaining wall design</a></div></div><div class="nav-item has-dd"><a href="/rigid-pavement/" class="nav-cat-link" style="color:inherit;text-decoration:none">Ground improvement</a> <span>▾</span><div class="dd"><a href="/">Stone column design</a><a href="/vibrocompaction/">Vibrocompaction design</a></div></div><div class="nav-item has-dd"><a href="/excavations/" class="nav-cat-link" style="color:inherit;text-decoration:none">Underground Excavations</a> <span>▾</span><div class="dd"><a href="/">Geotechnical analysis for soft soil tunnels</a><a href="/excavations/">Geotechnical design of deep excavations</a><a href="/excavations/">Geotechnical excavation monitoring</a></div></div><div class="nav-item has-dd"><a href="/" class="nav-cat-link" style="color:inherit;text-decoration:none">Roadway</a> <span>▾</span><div class="dd"><a href="/rigid-pavement/">Flexible pavement design</a><a href="/rigid-pavement/">Rigid pavement design</a><a href="/">CBR study for road design</a></div></div><div class="nav-item has-dd"><a href="/seismic/" class="nav-cat-link" style="color:inherit;text-decoration:none">Seismic</a> <span>▾</span><div class="dd"><a href="/liquefaction/">Soil liquefaction analysis</a><a href="/excavations/">Base isolation seismic design</a><a href="/excavations/">Seismic microzonation</a></div></div>
     </div>
 </div>
 
 <header class="hero"><div class="hero-inner">
-    <div class="crumb-2dbd-2dbd"><a href="/">Home</a> › <span>Seismic</span></div>
+    <div class="crumb"><a href="/">Home</a> › <span>Seismic</span></div>
     <h1>Seismic in Eugene Oregon</h1>
     <p class="tagline">Geotechnical engineering with regional judgment.</p>
     <a class="hero-cta" href="#main-content">LEARN MORE</a>
 </div></header>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><p>In Eugene, seismic design must account for the Willamette Valley’s basin effects and the Cascadia Subduction Zone’s long-duration shaking potential. Our local practice integrates site-specific <a href="liquefaction">soil liquefaction analysis</a> to map saturated alluvial deposits along the Willamette River, and <a href="seismic-microzonation">seismic microzonation</a> to resolve amplification patterns across the Eugene-Springfield metro area. All assessments follow ASCE 7-22 Chapter 11 and Oregon Structural Specialty Code provisions, with ground motion inputs tied to USGS National Seismic Hazard Model updates for the Pacific Northwest.</p><p>These studies are critical for essential facilities, multi-story mixed-use structures, and public infrastructure where post-earthquake functionality is mandated. For performance-based designs targeting immediate occupancy, we pair microzonation results with <a href="seismic-isolation">base isolation seismic design</a> to decouple superstructures from near-fault pulses and basin-generated surface waves. Every deliverable aligns with Eugene’s geologic hazard overlay zones and current IBC risk-targeted performance criteria.</p></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
+<img src="/img/licuefaccion-1.webp" alt="Seismic in Eugene Oregon" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<p>In Eugene, seismic design must account for the Willamette Valley’s basin effects and the Cascadia Subduction Zone’s long-duration shaking potential. Our local practice integrates site-specific <a href="liquefaction">soil liquefaction analysis</a> to map saturated alluvial deposits along the Willamette River, and <a href="seismic-microzonation">seismic microzonation</a> to resolve amplification patterns across the Eugene-Springfield metro area. All assessments follow ASCE 7-22 Chapter 11 and Oregon Structural Specialty Code provisions, with ground motion inputs tied to USGS National Seismic Hazard Model updates for the Pacific Northwest.</p><p>These studies are critical for essential facilities, multi-story mixed-use structures, and public infrastructure where post-earthquake functionality is mandated. For performance-based designs targeting immediate occupancy, we pair microzonation results with <a href="seismic-isolation">base isolation seismic design</a> to decouple superstructures from near-fault pulses and basin-generated surface waves. Every deliverable aligns with Eugene’s geologic hazard overlay zones and current IBC risk-targeted performance criteria.</p></div></section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../liquefaction/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Soil liquefaction analysis</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../seismic-isolation/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Base isolation seismic design</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../seismic-microzonation/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Seismic microzonation</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
-<section class="block mid-cta-2dbd-2dbd" style="padding:2rem 0">
+
+
+<section id="main-content" class="block"><div class="container"><p>Eugene's location in the southern Willamette Valley means anchor systems contend with a unique subsurface profile—thick sequences of Willamette Silt overlying older alluvial gravels, with groundwater often within 10 feet of the surface during the rainy season. This saturated, low-permeability soil demands a careful balance between active prestressing and passive load development. A standard tieback that performs flawlessly in the basalt bedrock of the Columbia Gorge can creep or lose bond in the valley's clay-rich deposits. Our design approach for <a data-interlink="1" href="/slopes/">slope-stability</a> projects integrates site-specific shear strength parameters from consolidated-undrained triaxial testing, because assuming drained behavior in these silts can overestimate passive resistance by 30% or more.</p><blockquote style="border-left:4px solid #14B8A6;background:rgba(0,0,0,.03);padding:1rem 1.25rem;margin:1.5rem 0 1.5rem 1rem;font-style:italic;color:#333;font-size:1.05rem;line-height:1.55;border-radius:0 6px 6px 0">In Willamette Silt, active anchor lock-off loads must account for a potential relaxation loss of 3–5% over the first 30 days due to soil creep.</blockquote></div></section>
+
+
+
+<section class="block tint"><div class="container"><h2>Our service areas</h2><div class="services-grid">
+        <div class="svc-card">
+            <div class="card-img" style="background-image:url('/img/estabilidad-taludes-1.webp')"></div>
+            <div class="card-body">
+                <h3>Slopes & Walls</h3>
+                <div class="card-links"><a href="/slopes/">Slope stability analysis ›</a><a href="/anchors/">Active/passive anchor design ›</a><a href="/">Retaining wall design ›</a></div>
+                <a class="card-viewall" href="#taludes">VIEW ALL SLOPES & WALLS ›</a>
+            </div>
+        </div>
+        <div class="svc-card">
+            <div class="card-img" style="background-image:url('/img/tuneles-suelo-blando-1.webp')"></div>
+            <div class="card-body">
+                <h3>Underground Excavations</h3>
+                <div class="card-links"><a href="/">Geotechnical analysis for soft soil tunnels ›</a><a href="/excavations/">Geotechnical design of deep excavations ›</a><a href="/excavations/">Geotechnical excavation monitoring ›</a></div>
+                <a class="card-viewall" href="#excavaciones-subterraneo">VIEW ALL UNDERGROUND EXCAVATIONS ›</a>
+            </div>
+        </div>
+        <div class="svc-card">
+            <div class="card-img" style="background-image:url('/img/pavimento-flexible-1.webp')"></div>
+            <div class="card-body">
+                <h3>Roadway</h3>
+                <div class="card-links"><a href="/rigid-pavement/">Flexible pavement design ›</a><a href="/rigid-pavement/">Rigid pavement design ›</a><a href="/">CBR study for road design ›</a></div>
+                <a class="card-viewall" href="#geotecnia-vial">VIEW ALL ROADWAY ›</a>
+            </div>
+        </div></div></div></section>
+
+
+
+<section class="block"><div class="container"><h2>Methodology and scope</h2><div>The physical execution of an anchor system in Eugene usually begins with a track-mounted Klemm or Hutte drill rig that can handle the transition from soft silt into dense cobble layers without losing alignment. We specify open-hole drilling with segmental casing through the overburden, then switch to a down-the-hole hammer once the gravels or weathered bedrock are encountered. Tendon assembly follows PTI recommendations, with strand encased in corrugated HDPE sheathing for the unbonded length, and a grout mix designed to achieve a minimum 28-day strength of 4,000 psi. The difference between active and passive anchors often comes down to the stressing sequence—active bars are tensioned to 80% of their ultimate load before lock-off, while passive elements rely entirely on ground movement to mobilize resistance. This distinction becomes critical in <a href="/">retaining-walls</a> design, where a soldier pile wall may use a combination of both to limit lateral deflection during excavation.</div></div></section><section class="block" style="padding:1.5rem 2rem"><div class="container" style="max-width:60%;margin:0 auto"><figure style="margin:0;border-radius:10px;overflow:hidden;border:1px solid #E5E7EB"><img src="/img/anclajes-2.webp" alt="Active and Passive Anchor Systems for Willamette Valley Soils" loading="lazy" style="width:100%;max-height:210px;object-fit:cover;display:block" width="800" height="600" loading="lazy" decoding="async"><figcaption style="padding:.5rem .8rem;font-size:.78rem;color:#64748B;background:#FAFAF7">Technical reference — Eugene Oregon</figcaption></figure></div></section><section class="block tint"><div class="container"><h2>Local considerations</h2><p>The most common mistake we see in local excavations is specifying a single row of passive anchors through the Willamette Silt without accounting for the preloading needed to limit movement in adjacent structures. A contractor may install 30-foot Dywidag bars with a 15-foot bond zone, but if the silt creeps under sustained load, the wall can deflect 2 to 3 inches before the passive anchor fully engages—enough to crack a neighboring foundation or buckle a sidewalk. In one case near the Whiteaker neighborhood, a shoring design that omitted active prestress resulted in measurable settlement of an adjacent wood-frame building, triggering a costly remediation. The fix was a combination of active strand anchors in the upper row and a <a data-interlink="1" href="/excavations/">deep-excavations</a> monitoring program with inclinometers to track real-time displacement during subsequent construction phases.</p></div></section>
+    <section class="block mid-cta" style="padding:2rem 0">
       <div style="max-width:720px;margin:0 auto;background:linear-gradient(135deg,#14B8A615,#14B8A608);border-left:4px solid #14B8A6;padding:1.6rem 1.8rem;border-radius:8px;text-align:center">
         <h3 style="margin:0 0 .4rem;font-size:1.15rem;color:#1E293B;text-align:center">Need a geotechnical assessment?</h3>
         <p style="margin:0 0 1rem;color:#64748B;font-size:.92rem;text-align:center">Reply within 24h.</p>
         <div style="margin:.4rem 0 0;text-align:center"><a href="mailto:contact@geotechnical-engineering.vip" style="display:inline-block;background:#14B8A6;color:#FFF !important;padding:1rem 2rem;border-radius:8px;text-decoration:none;font-weight:800;font-size:1.05rem;box-shadow:0 4px 12px rgba(0,0,0,.15)">Email: contact@geotechnical-engineering.vip</a></div>
       </div>
-    </section><section class="block"><div class="container"><h2>Standards used</h2><p>ASCE 7-22 (Minimum Design Loads and Associated Criteria for Buildings and Other Structures), IBC 2024 Chapter 18 (Soils and Foundations) and Chapter 33 (Safeguards During Construction), PTI DC35.1-22 (Recommendations for Prestressed Rock and Soil Anchors), ASTM D1586-18 (Standard Test Method for Standard Penetration Test), FHWA GEC No. 4 – Ground Anchors and Anchored Systems (Sabatini et al., updated 2023)</p></div></section>
+    </section><section class="block"><div class="container"><h2>Applicable standards</h2><p>ASCE 7-22 (Minimum Design Loads and Associated Criteria for Buildings and Other Structures), IBC 2024 Chapter 18 (Soils and Foundations) and Chapter 33 (Safeguards During Construction), PTI DC35.1-22 (Recommendations for Prestressed Rock and Soil Anchors), ASTM D1586-18 (Standard Test Method for Standard Penetration Test), FHWA GEC No. 4 – Ground Anchors and Anchored Systems (Sabatini et al., updated 2023)</p></div></section>
 
 <section class="block tint"><div class="container"><h2>Technical parameters</h2><div style="max-width:700px;margin:1.5rem auto;border-left:4px solid #14B8A6;border-radius:6px;overflow:hidden;background:#FFF;box-shadow:0 1px 3px rgba(0,0,0,.05)"><table style="width:100%;border-collapse:collapse;font-size:.92rem"><thead><tr style="background:#14B8A6;color:#FFF"><th style="padding:.75rem 1rem;text-align:left;font-weight:600">Parameter</th><th style="padding:.75rem 1rem;text-align:left;font-weight:600">Typical value</th></tr></thead><tbody><tr style="background:#FAFAF7"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Design method</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">Limit equilibrium (FHWA GEC No. 4) for external stability; beam-on-elastic-foundation (PYWall) for internal bending</td></tr><tr style="background:#FFFFFF"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Active anchor prestress</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">0.70–0.80 fpu (PTI DC35.1), verified by lift-off test after lock-off</td></tr><tr style="background:#FAFAF7"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Passive anchor mobilization</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">Displacement-dependent; typically 0.5–1.5 inches at the wall face to reach design load in Eugene silts</td></tr><tr style="background:#FFFFFF"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Unbonded length (active)</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">Minimum 15 ft or extends beyond the critical failure surface by 5 ft, whichever is greater</td></tr><tr style="background:#FAFAF7"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Grout compressive strength</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">4,000 psi at 28 days (ASTM C109), with Type II cement for moderate sulfate resistance</td></tr><tr style="background:#FFFFFF"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Corrosion protection</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">Class I (PTI) for permanent anchors: epoxy-coated bar + corrugated sheathing + grout cover</td></tr><tr style="background:#FAFAF7"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Proof testing frequency</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">100% of production anchors per IBC 1810.3.3.3, with creep test on 5% of anchors (minimum 3)</td></tr><tr style="background:#FFFFFF"><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE">Free length estimation (passive)</td><td style="padding:.7rem 1rem;border-bottom:1px solid #EEE;color:#222;font-weight:500">Bond length calculated using ultimate skin friction of 20–40 psf in silt, based on SPT N-values</td></tr></tbody></table></div></div></section>
 
-<section class="block"><div class="container"><h2>Common questions</h2><details><summary>What is the difference between active and passive ground anchors?</summary><p>Active anchors are prestressed immediately after grouting to apply a known force to the retaining structure, which controls wall movement from the start. Passive anchors are not prestressed; they develop resistance only as the ground deforms and loads the tendon. In Eugene's compressible Willamette Silt, active anchors are strongly preferred when adjacent buildings or utilities cannot tolerate more than an inch of lateral movement.</p></details><details><summary>How much does an anchor design package cost for a project in Eugene?</summary><p>For a typical retaining wall or slope stabilization project in Eugene, the anchor design package—including subgrade exploration review, bond length calculations, corrosion protection specification, and construction-phase submittal review—ranges from US$1,060 to US$3,640. The final scope depends on the number of anchor rows, the complexity of the site geology, and whether proof testing protocols must be developed.</p></details><details><summary>Which ASTM standard governs anchor testing in Oregon?</summary><p>Performance and proof testing procedures follow ASTM A944 for bar tendons and ASTM E488 for load testing of anchors in soil or rock. For strand systems, PTI DC35.1 provides the acceptance criteria, including creep test duration (typically 10 minutes at the lock-off load plus 60 minutes at 1.33 times the design load) and allowable movement limits. All testing must be supervised by a special inspector per IBC Chapter 17.</p></details></div></section>
+<section class="block"><div class="container"><h2>Frequently asked questions</h2><details><summary>What is the difference between active and passive ground anchors?</summary><p>Active anchors are prestressed immediately after grouting to apply a known force to the retaining structure, which controls wall movement from the start. Passive anchors are not prestressed; they develop resistance only as the ground deforms and loads the tendon. In Eugene's compressible Willamette Silt, active anchors are strongly preferred when adjacent buildings or utilities cannot tolerate more than an inch of lateral movement.</p></details><details><summary>How much does an anchor design package cost for a project in Eugene?</The final scope depends on the number of anchor rows, the complexity of the site geology, and whether proof testing protocols must be developed.</p></details><details><summary>Which ASTM standard governs anchor testing in Oregon?</summary><p>Performance and proof testing procedures follow ASTM A944 for bar tendons and ASTM E488 for load testing of anchors in soil or rock. For strand systems, PTI DC35.1 provides the acceptance criteria, including creep test duration (typically 10 minutes at the lock-off load plus 60 minutes at 1.33 times the design load) and allowable movement limits. All testing must be supervised by a special inspector per IBC Chapter 17.</p></details></div></section>
 
 
     <section class="block map-block" style="padding:3rem 1.5rem">
@@ -116,7 +187,7 @@ section.tint{background:#F7F8FA}</style><script type="application/ld+json">{"@co
           var m=L.map("map_20d4a5",{zoomControl:true,attributionControl:true}).setView([44.0505,-123.0951],11);
           L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}@2x.png",{
             attribution:"&copy; OpenStreetMap contributors &copy; CARTO",maxZoom:19,subdomains:"abcd"
-          }).addTo(m);
+          }).addTo(m);L.marker([44.0505,-123.0951],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36]})}).addTo(m);
           L.circle([44.0505,-123.0951],{radius:5000,color:'#171717',weight:2,fillColor:'#404040',fillOpacity:0.18}).addTo(m).bindPopup("Eugene Oregon");
         })();
         </script>
@@ -126,6 +197,6 @@ section.tint{background:#F7F8FA}</style><script type="application/ld+json">{"@co
       </div>
     </section>
 
-<footer style="background:#1F2937;color:rgba(255,255,255,.85);padding:3rem 1.5rem 1.5rem"><div style="max-width:720px;margin:0 auto;text-align:center"><h4 style="color:#FFF;font-size:1.15rem;margin:0 0 .3rem">Technical updates</h4><p style="margin:0 0 1.2rem;color:rgba(255,255,255,.65);font-size:.95rem">Email updates</p><form action="mailto:contact@geotechnical-engineering.vip" method="post" enctype="text/plain" style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap"><input type="email" name="email" placeholder="Your email" style="padding:.7rem 1rem;border-radius:6px;border:none;font-size:.95rem;min-width:220px"><button type="submit" style="background:#14B8A6;color:#FFF;padding:.7rem 1.4rem;border:none;border-radius:6px;font-weight:700;cursor:pointer">Subscribe</button></form><p style="margin:1.5rem 0 0;font-size:.82rem;color:rgba(255,255,255,.5)">Eugene Oregon, USA · <a href="mailto:contact@geotechnical-engineering.vip" style="color:rgba(255,255,255,.7)">contact@geotechnical-engineering.vip</a> · © 2026</p></div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div><div class="updated-info" data-updated="2026-03-23" style="text-align:center;font-size:.85rem;opacity:.7;padding:.5rem 0">Last updated: 2026-03-23</div></footer>
+<footer style="background:#1F2937;color:rgba(255,255,255,.85);padding:3rem 1.5rem 1.5rem"><div style="max-width:720px;margin:0 auto;text-align:center"><h4 style="color:#FFF;font-size:1.15rem;margin:0 0 .3rem">Technical updates</h4><p style="margin:0 0 1.2rem;color:rgba(255,255,255,.65);font-size:.95rem">Get email updates</p><form action="mailto:contact@geotechnical-engineering.vip" method="post" enctype="text/plain" style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap"><input type="email" name="email" placeholder="Your email" style="padding:.7rem 1rem;border-radius:6px;border:none;font-size:.95rem;min-width:220px"><button type="submit" style="background:#14B8A6;color:#FFF;padding:.7rem 1.4rem;border:none;border-radius:6px;font-weight:700;cursor:pointer">Subscribe</button></form><p style="margin:1.5rem 0 0;font-size:.82rem;color:rgba(255,255,255,.5)">Eugene Oregon, USA · <a href="mailto:contact@geotechnical-engineering.vip" style="color:rgba(255,255,255,.7)">contact@geotechnical-engineering.vip</a> · © 2026</p></div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div><div class="updated-info" data-updated="2026-05-01" style="text-align:center;font-size:.85rem;opacity:.7;padding:.5rem 0">Last updated: 2026-05-01</div></footer>
 
 </body></html>
